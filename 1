@@ -1,0 +1,75 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+list = ["r","p","s"]
+user_input = int(input("What do you want to chose? 0,1,2 : "))
+
+if user_input == 0:
+  print(rock)
+if user_input == 1:
+  print(paper)
+if user_input == 2:
+  print(scissors)
+
+import random
+cpu_dummy = "0"
+cpu = random.choice(list)
+if cpu == "r":
+    cpu_dummy = rock
+elif cpu == "p":
+    cpu_dummy = paper
+elif cpu_dummy == "s":
+    cpu_dummy = scissors
+else:
+    a=5
+
+print(f"CPU choose {cpu_dummy}")
+
+if user_input == 0:
+  if cpu == "r":
+    print("Draw")
+  elif cpu == "p":
+    print("CPU wins")
+  else :
+    print("You wins")
+elif user_input == 1:
+  if cpu == "r":
+    print("You wins")
+  elif cpu == "p":
+    print("Draw")
+  else :
+    print("CPU wins")
+elif user_input == 2:
+  if cpu == "r":
+    print("CPU wins")
+  elif cpu == "p":
+    print("You wins")
+  else :
+    print("Draw")
+else :
+  print("Wrong input")
